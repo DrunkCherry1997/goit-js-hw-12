@@ -4,7 +4,6 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
 document.addEventListener("DOMContentLoaded", () => {
   // Отримання посилань на елементи DOM
   const form = document.querySelector(".searchForm");
@@ -42,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loader.classList.remove("hidden");
     gallery.innerHTML = "";
+    loadButton.classList.add("hidden");
 
     try {
       // Запит до API Pixabay для отримання зображень з пагінацією
@@ -73,7 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
 
         displayImages(images);
-        loadButton.classList.remove("hidden");
+
+        // Перевірка, чи є ще зображення для завантаження
+        if (data.totalHits > currentPage * perPage) {
+          loadButton.classList.remove("hidden");
+        } else {
+          loadButton.classList.add("hidden");
+        }
+
         currentPage++;
       }
     } catch (error) {
@@ -130,7 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }));
 
         displayImages(images);
-        loadButton.classList.remove("hidden");
+
+        // Перевірка, чи є ще зображення для завантаження
+        if (data.totalHits > currentPage * perPage) {
+          loadButton.classList.remove("hidden");
+        } else {
+          loadButton.classList.add("hidden");
+        }
       }
     } catch (error) {
       // Вивід повідомлення про помилку

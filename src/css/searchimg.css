@@ -10,6 +10,7 @@ body {
 .app {
   text-align: center;
 }
+
 .searchForm {
 }
 
@@ -27,7 +28,6 @@ body {
   border-radius: 4px;
   border: 1px solid #808080;
   padding-inline: 8px 16px;
-  /* /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: linear;
@@ -45,6 +45,7 @@ body {
   color: #000;
   border: 0.5px solid #000;
 }
+
 .load-more-button {
   color: #fff;
   font-size: 16px;
@@ -55,12 +56,11 @@ body {
   border-radius: 8px;
   background: #4e75ff;
   border: none;
-
   margin-bottom: 10px;
   left: 50%;
-
   z-index: 1;
 }
+
 .button {
   color: #fff;
   font-size: 16px;
@@ -72,6 +72,7 @@ body {
   background: #4e75ff;
   border: none;
 }
+
 .load-more-button:hover,
 .load-more-button:focus,
 .button:hover,
@@ -150,11 +151,13 @@ img {
   justify-content: center;
   z-index: 1000;
 }
+
 .loader-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .loader {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #3498db;
