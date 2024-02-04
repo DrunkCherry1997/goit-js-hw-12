@@ -132,13 +132,6 @@ img {
   color: #000;
 }
 
-.result-likes,
-.result-views,
-.result-comments,
-.result-downloads {
-  font-weight: normal;
-}
-
 .loader-overlay {
   position: fixed;
   top: 0;
@@ -179,5 +172,9 @@ img {
 }
 
 .loader.hidden {
+  display: none;
+}
+
+.hidden {
   display: none;
 }

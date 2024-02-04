@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loader.classList.remove("hidden");
     gallery.innerHTML = "";
     loadButton.classList.add("hidden");
-
+   
     try {
       // Запит до API Pixabay для отримання зображень з пагінацією
       const response = await axios.get(`${apiUrl}?key=${apiKey}&q=${searchTerm}&image_type=photo&orientation=horizontal&safesearch=true&page=${currentPage}&per_page=${perPage}`);
@@ -169,10 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="${image.webformatURL}" alt="${image.tags}" class="image-thumbnail">
             </a>
             <div class="image-details">
-              <p><b>Likes:</b> <span class="result-likes">${image.likes}</span></p>
-              <p><b>Views:</b> <span class="result-views">${image.views}</span></p>
-              <p><b>Comments:</b> <span class="result-comments">${image.comments}</span></p>
-              <p><b>Downloads:</b> <span class="result-downloads">${image.downloads}</span></p>
+              <p><b>Likes:</b> ${image.likes}</p>
+              <p><b>Views:</b> ${image.views}</p>
+              <p><b>Comments:</b> ${image.comments}</p>
+              <p><b>Downloads:</b> ${image.downloads}</p>
             </div>
           </div>
         `
@@ -216,4 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     requestAnimationFrame(scrollAnimation);
   }
+
+
 });
