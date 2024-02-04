@@ -21,11 +21,16 @@
         />
         <button type="submit" class="button">Search</button>
       </form>
+      <div class="gallery"></div>
       <div class="loader-container">
         <div class="loader hidden">Loading images, wait please...</div>
       </div>
-      <div class="gallery"></div>
-      <button class="load-more-button hidden">Load more</button>
+      <button class="load-more-button hidden">
+        Load more
+        <div class="loader-container">
+          <div class="loader hidden">Loading images, wait please...</div>
+        </div>
+      </button>
     </div>
 
     <script src="./main.js" type="module"></script>
