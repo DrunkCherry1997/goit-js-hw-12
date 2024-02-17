@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightbox = new SimpleLightbox('.gallery a', {
     captionDelay: 250,
     captionsData: 'alt',
-  });
+  });   
 
-  // Поточна сторінка для пагінації
+   // Поточна сторінка для пагінації
   let currentPage = 1;
 
   // Обробник події для форми пошуку
